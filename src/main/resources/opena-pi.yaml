@@ -1,0 +1,1027 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /expressionBesoinDetails:
+    get:
+      summary: List all expressionBesoinDetails
+      operationId: listExpressionBesoinDetails
+      tags:
+        - expressionBesoinDetails
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of expressionBesoinDetails
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/ExpressionBesoinDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a expressionBesoinDetail
+      operationId: createExpressionBesoinDetails
+      tags:
+        - expressionBesoinDetails
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /expressionBesoinDetails/{expressionBesoinDetailId}:
+    get:
+      summary: Info for a specific expressionBesoinDetail
+      operationId: showExpressionBesoinDetailById
+      tags:
+        - expressionBesoinDetails
+      parameters:
+        - name: expressionBesoinDetailId
+          in: path
+          required: true
+          description: The id of the expressionBesoinDetail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/ExpressionBesoinDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /produits:
+    get:
+      summary: List all produits
+      operationId: listProduits
+      tags:
+        - produits
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of produits
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Produits'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a produit
+      operationId: createProduits
+      tags:
+        - produits
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /produits/{produitId}:
+    get:
+      summary: Info for a specific produit
+      operationId: showProduitById
+      tags:
+        - produits
+      parameters:
+        - name: produitId
+          in: path
+          required: true
+          description: The id of the produit to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Produits'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /responsabilites:
+    get:
+      summary: List all responsabilites
+      operationId: listResponsabilites
+      tags:
+        - responsabilites
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of responsabilites
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Responsabilites'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a responsabilite
+      operationId: createResponsabilites
+      tags:
+        - responsabilites
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /responsabilites/{responsabiliteId}:
+    get:
+      summary: Info for a specific responsabilite
+      operationId: showResponsabiliteById
+      tags:
+        - responsabilites
+      parameters:
+        - name: responsabiliteId
+          in: path
+          required: true
+          description: The id of the responsabilite to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Responsabilites'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /typeAchatMateriels:
+    get:
+      summary: List all typeAchatMateriels
+      operationId: listTypeAchatMateriels
+      tags:
+        - typeAchatMateriels
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of typeAchatMateriels
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TypeAchatMateriels'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a typeAchatMateriel
+      operationId: createTypeAchatMateriels
+      tags:
+        - typeAchatMateriels
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /typeAchatMateriels/{typeAchatMaterielId}:
+    get:
+      summary: Info for a specific typeAchatMateriel
+      operationId: showTypeAchatMaterielById
+      tags:
+        - typeAchatMateriels
+      parameters:
+        - name: typeAchatMaterielId
+          in: path
+          required: true
+          description: The id of the typeAchatMateriel to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TypeAchatMateriels'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /budgetEntiteAdmins:
+    get:
+      summary: List all budgetEntiteAdmins
+      operationId: listBudgetEntiteAdmins
+      tags:
+        - budgetEntiteAdmins
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of budgetEntiteAdmins
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/BudgetEntiteAdmins'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a budgetEntiteAdmin
+      operationId: createBudgetEntiteAdmins
+      tags:
+        - budgetEntiteAdmins
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /budgetEntiteAdmins/{budgetEntiteAdminId}:
+    get:
+      summary: Info for a specific budgetEntiteAdmin
+      operationId: showBudgetEntiteAdminById
+      tags:
+        - budgetEntiteAdmins
+      parameters:
+        - name: budgetEntiteAdminId
+          in: path
+          required: true
+          description: The id of the budgetEntiteAdmin to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/BudgetEntiteAdmins'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /entiteAdmins:
+    get:
+      summary: List all entiteAdmins
+      operationId: listEntiteAdmins
+      tags:
+        - entiteAdmins
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of entiteAdmins
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/EntiteAdmins'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a entiteAdmin
+      operationId: createEntiteAdmins
+      tags:
+        - entiteAdmins
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /entiteAdmins/{entiteAdminId}:
+    get:
+      summary: Info for a specific entiteAdmin
+      operationId: showEntiteAdminById
+      tags:
+        - entiteAdmins
+      parameters:
+        - name: entiteAdminId
+          in: path
+          required: true
+          description: The id of the entiteAdmin to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/EntiteAdmins'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /employes:
+    get:
+      summary: List all employes
+      operationId: listEmployes
+      tags:
+        - employes
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of employes
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Employes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a employe
+      operationId: createEmployes
+      tags:
+        - employes
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /employes/{employeId}:
+    get:
+      summary: Info for a specific employe
+      operationId: showEmployeById
+      tags:
+        - employes
+      parameters:
+        - name: employeId
+          in: path
+          required: true
+          description: The id of the employe to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Employes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /categorieProduits:
+    get:
+      summary: List all categorieProduits
+      operationId: listCategorieProduits
+      tags:
+        - categorieProduits
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of categorieProduits
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/CategorieProduits'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a categorieProduit
+      operationId: createCategorieProduits
+      tags:
+        - categorieProduits
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /categorieProduits/{categorieProduitId}:
+    get:
+      summary: Info for a specific categorieProduit
+      operationId: showCategorieProduitById
+      tags:
+        - categorieProduits
+      parameters:
+        - name: categorieProduitId
+          in: path
+          required: true
+          description: The id of the categorieProduit to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/CategorieProduits'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /budgets:
+    get:
+      summary: List all budgets
+      operationId: listBudgets
+      tags:
+        - budgets
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of budgets
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Budgets'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a budget
+      operationId: createBudgets
+      tags:
+        - budgets
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /budgets/{budgetId}:
+    get:
+      summary: Info for a specific budget
+      operationId: showBudgetById
+      tags:
+        - budgets
+      parameters:
+        - name: budgetId
+          in: path
+          required: true
+          description: The id of the budget to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Budgets'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /achatMateriels:
+    get:
+      summary: List all achatMateriels
+      operationId: listAchatMateriels
+      tags:
+        - achatMateriels
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of achatMateriels
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/AchatMateriels'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a achatMateriel
+      operationId: createAchatMateriels
+      tags:
+        - achatMateriels
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /achatMateriels/{achatMaterielId}:
+    get:
+      summary: Info for a specific achatMateriel
+      operationId: showAchatMaterielById
+      tags:
+        - achatMateriels
+      parameters:
+        - name: achatMaterielId
+          in: path
+          required: true
+          description: The id of the achatMateriel to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/AchatMateriels'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /mandats:
+    get:
+      summary: List all mandats
+      operationId: listMandats
+      tags:
+        - mandats
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of mandats
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Mandats'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a mandat
+      operationId: createMandats
+      tags:
+        - mandats
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /mandats/{mandatId}:
+    get:
+      summary: Info for a specific mandat
+      operationId: showMandatById
+      tags:
+        - mandats
+      parameters:
+        - name: mandatId
+          in: path
+          required: true
+          description: The id of the mandat to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Mandats'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /achatMaterielDetails:
+    get:
+      summary: List all achatMaterielDetails
+      operationId: listAchatMaterielDetails
+      tags:
+        - achatMaterielDetails
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of achatMaterielDetails
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/AchatMaterielDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a achatMaterielDetail
+      operationId: createAchatMaterielDetails
+      tags:
+        - achatMaterielDetails
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /achatMaterielDetails/{achatMaterielDetailId}:
+    get:
+      summary: Info for a specific achatMaterielDetail
+      operationId: showAchatMaterielDetailById
+      tags:
+        - achatMaterielDetails
+      parameters:
+        - name: achatMaterielDetailId
+          in: path
+          required: true
+          description: The id of the achatMaterielDetail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/AchatMaterielDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /expressionBesoins:
+    get:
+      summary: List all expressionBesoins
+      operationId: listExpressionBesoins
+      tags:
+        - expressionBesoins
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of expressionBesoins
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/ExpressionBesoins'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a expressionBesoin
+      operationId: createExpressionBesoins
+      tags:
+        - expressionBesoins
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /expressionBesoins/{expressionBesoinId}:
+    get:
+      summary: Info for a specific expressionBesoin
+      operationId: showExpressionBesoinById
+      tags:
+        - expressionBesoins
+      parameters:
+        - name: expressionBesoinId
+          in: path
+          required: true
+          description: The id of the expressionBesoin to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/ExpressionBesoins'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+
+
+definitions:
+  ExpressionBesoinDetail:
+    type: "object"
+    required:
+      - id
+      - qteDemandee
+      - qteAccordee
+      - qteLivre
+    properties:
+      id:
+        type: int
+      qteDemandee:
+        type: number
+      qteAccordee:
+        type: number
+      qteLivre:
+        type: number
+  ExpressionBesoinDetails:
+    type: array
+    items:
+      $ref: '#/definitions/ExpressionBesoinDetail'
+  Produit:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  Produits:
+    type: array
+    items:
+      $ref: '#/definitions/Produit'
+  Responsabilite:
+    type: "object"
+    required:
+      - id
+      - libelle
+      - code
+    properties:
+      id:
+        type: int
+      libelle:
+        type: string
+      code:
+        type: string
+  Responsabilites:
+    type: array
+    items:
+      $ref: '#/definitions/Responsabilite'
+  TypeAchatMateriel:
+    type: "object"
+    required:
+      - id
+      - libelle
+      - code
+    properties:
+      id:
+        type: int
+      libelle:
+        type: string
+      code:
+        type: string
+  TypeAchatMateriels:
+    type: array
+    items:
+      $ref: '#/definitions/TypeAchatMateriel'
+  BudgetEntiteAdmin:
+    type: "object"
+    required:
+      - id
+      - montantEntite
+      - montantInvEntite
+      - montantFctEntite
+    properties:
+      id:
+        type: int
+      montantEntite:
+        type: number
+      montantInvEntite:
+        type: number
+      montantFctEntite:
+        type: number
+  BudgetEntiteAdmins:
+    type: array
+    items:
+      $ref: '#/definitions/BudgetEntiteAdmin'
+  EntiteAdmin:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  EntiteAdmins:
+    type: array
+    items:
+      $ref: '#/definitions/EntiteAdmin'
+  Employe:
+    type: "object"
+    required:
+      - id
+      - nom
+      - prenom
+    properties:
+      id:
+        type: int
+      nom:
+        type: string
+      prenom:
+        type: string
+  Employes:
+    type: array
+    items:
+      $ref: '#/definitions/Employe'
+  CategorieProduit:
+    type: "object"
+    required:
+      - id
+      - libelle
+      - code
+    properties:
+      id:
+        type: int
+      libelle:
+        type: string
+      code:
+        type: string
+  CategorieProduits:
+    type: array
+    items:
+      $ref: '#/definitions/CategorieProduit'
+  Budget:
+    type: "object"
+    required:
+      - id
+      - dateBudget
+      - montant
+      - montantInvestissement
+      - montantFonction
+    properties:
+      id:
+        type: int
+      dateBudget:
+        type: date
+      montant:
+        type: number
+      montantInvestissement:
+        type: number
+      montantFonction:
+        type: number
+  Budgets:
+    type: array
+    items:
+      $ref: '#/definitions/Budget'
+  AchatMateriel:
+    type: "object"
+    required:
+      - id
+      - montantTotal
+      - dateAchat
+    properties:
+      id:
+        type: int
+      montantTotal:
+        type: number
+      dateAchat:
+        type: date
+  AchatMateriels:
+    type: array
+    items:
+      $ref: '#/definitions/AchatMateriel'
+  Mandat:
+    type: "object"
+    required:
+      - id
+      - dateDebut
+      - dateFin
+    properties:
+      id:
+        type: int
+      dateDebut:
+        type: date
+      dateFin:
+        type: date
+  Mandats:
+    type: array
+    items:
+      $ref: '#/definitions/Mandat'
+  AchatMaterielDetail:
+    type: "object"
+    required:
+      - id
+      - qteAchetee
+      - qteRecue
+      - qteLivree
+    properties:
+      id:
+        type: int
+      qteAchetee:
+        type: number
+      qteRecue:
+        type: number
+      qteLivree:
+        type: number
+  AchatMaterielDetails:
+    type: array
+    items:
+      $ref: '#/definitions/AchatMaterielDetail'
+  ExpressionBesoin:
+    type: "object"
+    required:
+      - id
+      - description
+      - dateExpression
+    properties:
+      id:
+        type: int
+      description:
+        type: string
+      dateExpression:
+        type: date
+  ExpressionBesoins:
+    type: array
+    items:
+      $ref: '#/definitions/ExpressionBesoin'
+
+  Error:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
