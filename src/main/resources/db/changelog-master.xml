@@ -1,0 +1,20 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+            <include file="classpath:db/migration/changelog/expressionbesoin/ExpressionBesoinDetail.xml"/>
+        <include file="classpath:db/migration/changelog/produit/Produit.xml"/>
+        <include file="classpath:db/migration/changelog/mandat/Responsabilite.xml"/>
+        <include file="classpath:db/migration/changelog/achat/TypeAchatMateriel.xml"/>
+        <include file="classpath:db/migration/changelog/budget/BudgetEntiteAdmin.xml"/>
+        <include file="classpath:db/migration/changelog/commun/EntiteAdmin.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Employe.xml"/>
+        <include file="classpath:db/migration/changelog/produit/CategorieProduit.xml"/>
+        <include file="classpath:db/migration/changelog/budget/Budget.xml"/>
+        <include file="classpath:db/migration/changelog/achat/AchatMateriel.xml"/>
+        <include file="classpath:db/migration/changelog/mandat/Mandat.xml"/>
+        <include file="classpath:db/migration/changelog/achat/AchatMaterielDetail.xml"/>
+        <include file="classpath:db/migration/changelog/expressionbesoin/ExpressionBesoin.xml"/>
+
+</databaseChangeLog>
